@@ -1,0 +1,31 @@
+https://github.com/Wquinde003/SIPAU-GEOBORRALA.git
+
+npm init
+
+npm i express body-parser pg
+
+CREATE TABLE residente (
+    idresidente BIGSERIAL NOT NULL,
+    manzana integer NOT NULL,
+    villa integer NOT NULL,
+    cidueño character varying(10),
+    nombdueño character varying(50),
+    apedueño character varying(50),
+    ciresidente character varying(10),
+    nombresidente character varying(50),
+    aperesidente character varying(50),
+    celularresidente character varying(10),
+    emailresidente character varying(40),
+    fecha timestamp without time zone
+);
+
+ALTER TABLE residente ADD CONSTRAINT PK_residente PRIMARY KEY (iidresidente);
+
+
+
+SELECT iidresidente, manzana, villa, "cidueño", "nombdueño", "apedueño", ciresidente, nombresidente, aperesidente, celularresidente, emailresidente, fecha
+	FROM public.residente;
+
+INSERT INTO residente(manzana, villa, cidueño, nombdueño, apedueño, ciresidente, nombresidente, aperesidente, celularresidente, emailresidente, fecha) 
+VALUES (1, 2, '1845124512', 'Carlos Manuel','Rosas Eto', '0989562345', 'Rick Toni', 'Orrala Mera', '0978451245', 'toniorrala@gmail.com', '26-11-2022')
+
